@@ -31,7 +31,7 @@ module.exports = [
       extensions: ['.json', '.js'],
     },
 
-    entry: './src/index.js',
+    entry: './index.js',
     output: {
 
       path: `${__dirname}/bin`,
