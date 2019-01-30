@@ -1,0 +1,5 @@
+{
+  "outputPath": "results/index.html",
+  "includeConsoleLog": true,
+  "includeFailureMsg": true
+}
