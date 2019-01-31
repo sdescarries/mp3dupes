@@ -11,8 +11,7 @@
   "scripts": {
     "build": "node ./bundle.js",
     "lint": "eslint --fix ./src",
-    "test": "jest --watch",
-    "test:ci": "jest --all --coverage"
+    "test": "jest --all --coverage"
   },
   "bin": {
     "mp3dupes": "bin/mp3dupes"
