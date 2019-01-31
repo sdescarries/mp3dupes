@@ -7,7 +7,7 @@ const ProgressBar = require('progress');
 const readline = require('readline');
 const chalk = require('chalk');
 const diacritics = require('diacritics').remove;
-
+const mm = require('music-metadata');
 
 function help() {
   console.log(`

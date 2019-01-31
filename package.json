@@ -29,6 +29,7 @@
     "fs-extra": "^7.0.1",
     "jest": "^24.0.0",
     "jest-html-reporter": "^2.4.3",
+    "music-metadata": "^3.5.1",
     "node-id3": "^0.1.7",
     "progress": "^2.0.3",
     "shebang-loader": "^0.0.1",
