@@ -6,33 +6,33 @@ console.warn = jest.fn();
 console.error = jest.fn();
 process.exit = jest.fn();
 
+const inp = './data';
+const res = './results';
+
+function its(desc, argv = []) {
+
+  return it(desc, async () => {
+
+    const out = `./${res}/${desc}`;
+
+    expect(() => fs.ensureDirSync(res)).not.toThrow();
+    expect(() => fs.removeSync(out)).not.toThrow();
+    expect(() => fs.copySync(inp, out)).not.toThrow();
+
+    await expect(mp3dupes([
+      'node',
+      'mp3dupes',
+      ...argv,
+      out
+    ])).resolves.toBeUndefined();
+
+    expect(fs.readdirSync(out)).toMatchSnapshot();
+  });
+}
+
 describe('mp3dupes', () => {
 
-  beforeAll(() => {
-
-    console.log({
-      __dirname,
-      __filename,
-      argv: process.argv,
-    });
-
-    // copy test data in volatile directory for test input
-    fs.ensureDirSync('./results/');
-    fs.removeSync('./results/mp3dupes');
-    fs.copySync('./data', './results/mp3dupes');
-
-  });
-  /*
-  it('resolves --help', async (done) => {
-    process.argv = ['node', 'mp3dupes', '--help'];
-    await expect(mp3dupes()).resolves.toBeUndefined();
-    done();
-  });
-*/
-  it('resolves test data', async (done) => {
-    process.argv = ['node', 'mp3dupes', '--silent', '--rename', './results/mp3dupes'];
-    await expect(mp3dupes()).resolves.toBeUndefined();
-    done();
-  });
+  its('resolves help with no change', [ '--help' ]);
+  its('renames and removes duplicates', [ '--silent', '--rename' ]);
 
 });

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mp3dupes renames and removes duplicates 1`] = `
+Array [
+  "001 Wait It Out Artec.mp3",
+  "002 Winter ENiGMA Dubz.mp3",
+  "003 Im Lost A lEte Passe.mp3",
+  "004 Foo Bar.mp3",
+  "005 I Dont Feel It AsscDhE nouya.mp3",
+  "plain text.txt",
+]
+`;
+
+exports[`mp3dupes resolves help with no change 1`] = `
+Array [
+  "123 Foo Bar.mp3",
+  "123 duplicate B.mp3",
+  "234 duplicate C.mp3",
+  "32.mp3",
+  "412 duplicate A.mp3",
+  "53 unknown.mp3",
+  "no sequence.mp3",
+  "no tags.mp3",
+  "plain text.txt",
+]
+`;

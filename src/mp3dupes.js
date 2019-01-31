@@ -52,23 +52,29 @@ async function getConfirm(message) {
   }
 }
 
-async function mp3dupes() {
+async function mp3dupes(argv = process.argv) {
 
-  let path;
+  function getPath(args) {
+    try {
+      const path = args.pop();
+      path && (program.path = path);
+    } catch (e) {}
+  }
 
   program
     .version(version)
     .on('--help', help)
-    .on('command:*', (args) => { args && (path = args.pop()); })
+    .on('command:*', getPath)
     .option('--verbose', 'Enable verbose logging')
     .option('--silent', 'Disable progress bar and remove duplicate files without confirmation')
     .option('--rename', 'Automatically rename files to be portable')
-    .parse(process.argv);
+    .parse(argv);
 
   const {
     verbose = false,
     silent = false,
     rename = false,
+    path,
   } = program;
 
   if (path == null) {
@@ -95,7 +101,7 @@ async function mp3dupes() {
 
   let bar;
 
-  if (!silent) {
+  if (!silent && !verbose) {
     bar = new ProgressBar(
       '  parsing [:bar] :percent :rate/sec :etas', {
         complete: '=',
@@ -123,7 +129,8 @@ async function mp3dupes() {
       }
 
       const file = uri.normalize().readable();
-      const { title = 'undefined' } = NodeID3.read(file);
+      const { common = {} } = await mm.parseFile(file, { native: true });
+      const { title = 'undefined' } = common;
       let count = db[title] || 0;
 
       if (count > 0) {
