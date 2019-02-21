@@ -9,7 +9,7 @@ script:
   - yarn
   - yarn test
   - yarn build
-  - xz bind/mp3dupes
+  - xz bin/mp3dupes
 
 deploy:
   provider: pages
@@ -27,4 +27,4 @@ deploy:
   github-token: $GITHUB_TOKEN
   on:
     tags
-  file: bind/mp3dupes.xz
+  file: bin/mp3dupes.xz
