@@ -12,19 +12,17 @@ script:
   - xz bin/mp3dupes
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  on:
-    branch: master
-  local-dir: reports
-
-deploy:
-  provider: releases
-  skip-cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  on:
-    tags
-  file: bin/mp3dupes.xz
+  - provider: pages
+    skip-cleanup: true
+    keep-history: true
+    github-token: $GITHUB_TOKEN
+    on:
+      branch: master
+    local-dir: reports
+  - provider: releases
+    skip-cleanup: true
+    keep-history: true
+    github-token: $GITHUB_TOKEN
+    on:
+      tags
+    file: bin/mp3dupes.xz
