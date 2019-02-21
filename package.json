@@ -1,6 +1,6 @@
 {
   "name": "@sdescarries/mp3dupes",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Browses a local directory for MP3 files and deletes duplicate entries based on ID3 tags",
   "main": "./index.js",
   "module": "src/mp3dupes.js",
