@@ -1,14 +1,26 @@
 language: node_js
-node_js:
-  - "node"
 
-cache: yarn
+
+script:
+  - yarn
+  - yarn test
+  - yarn build
+  - xz bind/mp3dupes
 
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
   keep-history: true
+  github-token: $GITHUB_TOKEN
   on:
     branch: master
   local-dir: reports
+
+deploy:
+  provider: releases
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  on:
+    tags
+  file: bind/mp3dupes.xz
