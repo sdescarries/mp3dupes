@@ -18,7 +18,7 @@ deploy:
     github-token: $GITHUB_TOKEN
     on:
       branch: master
-    local-dir: reports
+    local-dir: results
   - provider: releases
     skip-cleanup: true
     keep-history: true
