@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1575893911733" clover="3.2.0">
-  <project timestamp="1575893911734" name="All files">
+<coverage generated="1578572485540" clover="3.2.0">
+  <project timestamp="1578572485540" name="All files">
     <metrics statements="82" coveredstatements="63" conditionals="40" coveredconditionals="24" methods="8" coveredmethods="4" elements="130" coveredelements="91" complexity="0" loc="82" ncloc="82" packages="1" files="1" classes="1"/>
     <file name="mp3dupes.js" path="/home/travis/build/sdescarries/mp3dupes/src/mp3dupes.js">
       <metrics statements="82" coveredstatements="63" conditionals="40" coveredconditionals="24" methods="8" coveredmethods="4"/>
