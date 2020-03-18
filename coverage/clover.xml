@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1584299606753" clover="3.2.0">
-  <project timestamp="1584299606753" name="All files">
+<coverage generated="1584491070317" clover="3.2.0">
+  <project timestamp="1584491070317" name="All files">
     <metrics statements="82" coveredstatements="63" conditionals="40" coveredconditionals="24" methods="8" coveredmethods="4" elements="130" coveredelements="91" complexity="0" loc="82" ncloc="82" packages="1" files="1" classes="1"/>
     <file name="mp3dupes.js" path="/home/travis/build/sdescarries/mp3dupes/src/mp3dupes.js">
       <metrics statements="82" coveredstatements="63" conditionals="40" coveredconditionals="24" methods="8" coveredmethods="4"/>
@@ -29,8 +29,8 @@
       <line num="49" count="0" type="stmt"/>
       <line num="50" count="0" type="cond" truecount="0" falsecount="4"/>
       <line num="51" count="0" type="stmt"/>
-      <line num="58" count="3" type="stmt"/>
-      <line num="59" count="3" type="stmt"/>
+      <line num="58" count="2" type="stmt"/>
+      <line num="59" count="2" type="stmt"/>
       <line num="60" count="2" type="cond" truecount="2" falsecount="0"/>
       <line num="64" count="2" type="stmt"/>
       <line num="78" count="2" type="stmt"/>

@@ -1,5 +1,5 @@
 TN:
-SF:/home/travis/build/sdescarries/mp3dupes/src/mp3dupes.js
+SF:src/mp3dupes.js
 FN:12,help
 FN:24,numsort
 FN:34,getInput
@@ -17,7 +17,7 @@ FNDA:0,(anonymous_3)
 FNDA:0,(anonymous_4)
 FNDA:0,getConfirm
 FNDA:2,mp3dupes
-FNDA:3,getPath
+FNDA:2,getPath
 DA:1,1
 DA:2,1
 DA:3,1
@@ -43,8 +43,8 @@ DA:43,0
 DA:49,0
 DA:50,0
 DA:51,0
-DA:58,3
-DA:59,3
+DA:58,2
+DA:59,2
 DA:60,2
 DA:64,2
 DA:78,2
